@@ -22,7 +22,7 @@ O sistema é destinado a empresas que realizam atendimentos e precisam organizar
 
 O modelo relacional representa as entidades do sistema, seus atributos e os relacionamentos existentes entre elas.
 
-mermaid
+```mermaid
 erDiagram
 
     PESSOA ||--o| ATENDENTE : "pode ser"
@@ -70,36 +70,44 @@ erDiagram
         int id_atendente FK
         int id_cliente FK
     }
+```
 
-6. Entidades
-Pessoa
+## 6. Entidades
+
+### Pessoa
 
 Armazena os dados básicos das pessoas cadastradas no sistema.
 
-Atendente
+### Atendente
 
 Representa as pessoas que atuam como atendentes no sistema.
 
-Cliente
+### Cliente
 
 Representa as pessoas que utilizam o serviço de atendimento.
 
-Fila
+### Fila
 
 Representa as diferentes filas de atendimento da empresa.
 
-Atendente_Fila
+### Atendente_Fila
 
 Relaciona os atendentes às filas em que eles atuam.
 
-Atendimento
+### Atendimento
 
 Registra cada atendimento realizado, incluindo a data e hora, a fila, o atendente e o cliente.
 
-7. Relacionamentos
+## 7. Relacionamentos
+
 Uma pessoa pode ser atendente, cliente ou ambos.
+
 Um atendente pode participar de várias filas.
+
 Uma fila pode possuir vários atendentes.
+
 Um cliente pode possuir vários atendimentos.
+
 Um atendente pode realizar vários atendimentos.
+
 Uma fila pode receber vários atendimentos.
