@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar — Sistema de Atendimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <header>
+        <div class="logo">
+            <span class="logo-icon">✦</span>
+            <h1>Sistema de Atendimento</h1>
+        </div>
+    </header>
+
+    <main class="auth-shell">
+
+        <div class="auth-card">
+
+            <span class="mini-label">ACESSO AO SISTEMA</span>
+            <h2>Bem-vindo de volta</h2>
+            <p class="auth-sub">Entre com sua conta para acessar o painel de atendimento.</p>
+
+            <form class="auth-form" id="form-login">
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="voce@empresa.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Entrar</button>
+
+            </form>
+
+            <p class="auth-footer-link">
+                Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a>
+            </p>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <span>Sistema de Atendimento</span>
+        <span>Dashboard • 2026</span>
+    </footer>
+
+    <script>
+        // Se o cadastro preencheu o e-mail, já deixa pronto no campo
+        const emailCadastrado = sessionStorage.getItem('atendimento_email');
+        if (emailCadastrado) {
+            document.getElementById('email').value = emailCadastrado;
+            sessionStorage.removeItem('atendimento_email');
+        }
+
+        document.getElementById('form-login').addEventListener('submit', function (evento) {
+            evento.preventDefault();
+            // Protótipo de front-end: aqui entraria a validação real com o banco de dados
+            sessionStorage.setItem('atendimento_logado', 'true');
+            window.location.href = 'index.html';
+        });
+    </script>
+
+</body>
+
+</html>

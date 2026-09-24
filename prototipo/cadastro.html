@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar conta — Sistema de Atendimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <header>
+        <div class="logo">
+            <span class="logo-icon">✦</span>
+            <h1>Sistema de Atendimento</h1>
+        </div>
+    </header>
+
+    <main class="auth-shell">
+
+        <div class="auth-card">
+
+            <span class="mini-label">NOVA CONTA</span>
+            <h2>Criar cadastro</h2>
+            <p class="auth-sub">Preencha os dados abaixo para acessar o sistema de atendimento.</p>
+
+            <form class="auth-form" id="form-cadastro">
+
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" placeholder="Seu nome" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="voce@empresa.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Crie uma senha" required>
+                </div>
+
+                <div class="campo">
+                    <label for="confirmar-senha">Confirmar senha</label>
+                    <input type="password" id="confirmar-senha" placeholder="Repita a senha" required>
+                </div>
+
+                <div class="campo">
+                    <label>Tipo de conta</label>
+                    <div class="auth-radios">
+
+                        <label class="radio-pill">
+                            <input type="radio" name="tipo-conta" value="atendente" checked>
+                            Atendente
+                        </label>
+
+                        <label class="radio-pill">
+                            <input type="radio" name="tipo-conta" value="cliente">
+                            Cliente
+                        </label>
+
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">Criar conta</button>
+
+            </form>
+
+            <p class="auth-footer-link">
+                Já tem conta? <a href="login.html">Entrar</a>
+            </p>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <span>Sistema de Atendimento</span>
+        <span>Dashboard • 2026</span>
+    </footer>
+
+    <script>
+        document.getElementById('form-cadastro').addEventListener('submit', function (evento) {
+            evento.preventDefault();
+
+            const senha = document.getElementById('senha').value;
+            const confirmarSenha = document.getElementById('confirmar-senha').value;
+
+            if (senha !== confirmarSenha) {
+                alert('As senhas não coincidem. Verifique e tente novamente.');
+                return;
+            }
+
+            // Protótipo de front-end: aqui entraria o INSERT real em pessoa/atendente/cliente
+            sessionStorage.setItem('atendimento_email', document.getElementById('email').value);
+            window.location.href = 'login.html';
+        });
+    </script>
+
+</body>
+
+</html>

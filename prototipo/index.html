@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Atendimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <header>
+        <div class="logo">
+            <span class="logo-icon">✦</span>
+            <h1>Sistema de Atendimento</h1>
+        </div>
+
+        <div class="header-acoes">
+            <div class="status">
+                <span class="status-dot"></span>
+                Sistema online
+            </div>
+
+            <a href="login.html" class="btn-sair" id="btn-sair">Sair</a>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="titulo">
+
+            <div>
+                <span class="subtitulo">VISÃO GERAL</span>
+                <h2>Dashboard de Atendimento</h2>
+                <p>Acompanhe o fluxo de atendimento da loja.</p>
+            </div>
+
+            <div class="periodo">
+                <span>Período analisado</span>
+                <strong>01 — 05 SET 2026</strong>
+            </div>
+
+        </section>
+
+
+        <!-- CARDS -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <div class="card-top">
+                    <div class="icone">◉</div>
+                    <span class="card-label">TOTAL</span>
+                </div>
+
+                <strong>20</strong>
+
+                <p>atendimentos realizados</p>
+
+                <div class="card-line"></div>
+
+            </div>
+
+
+            <div class="card destaque">
+
+                <div class="card-top">
+                    <div class="icone">★</div>
+                    <span class="card-label">MAIOR DEMANDA</span>
+                </div>
+
+                <strong>Vendas</strong>
+
+                <p>8 atendimentos</p>
+
+                <div class="card-line"></div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-top">
+                    <div class="icone">♟</div>
+                    <span class="card-label">ATENDENTES</span>
+                </div>
+
+                <strong>10 / 10</strong>
+
+                <p>Ana e Bruno</p>
+
+                <div class="card-line"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GRÁFICOS -->
+
+        <section class="graficos">
+
+
+            <div class="grafico">
+
+                <div class="grafico-titulo">
+                    <div>
+                        <span class="mini-label">DISTRIBUIÇÃO</span>
+                        <h3>Atendimentos por fila</h3>
+                    </div>
+
+                    <span class="grafico-icon">↗</span>
+                </div>
+
+
+                <div class="barra">
+
+                    <div class="barra-info">
+                        <span>Vendas</span>
+                        <strong>8</strong>
+                    </div>
+
+                    <div class="barra-fundo">
+                        <div class="progresso vendas"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="barra">
+
+                    <div class="barra-info">
+                        <span>Financeiro</span>
+                        <strong>5</strong>
+                    </div>
+
+                    <div class="barra-fundo">
+                        <div class="progresso financeiro"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="barra">
+
+                    <div class="barra-info">
+                        <span>Suporte Técnico</span>
+                        <strong>4</strong>
+                    </div>
+
+                    <div class="barra-fundo">
+                        <div class="progresso suporte"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="barra">
+
+                    <div class="barra-info">
+                        <span>Trocas e Garantias</span>
+                        <strong>3</strong>
+                    </div>
+
+                    <div class="barra-fundo">
+                        <div class="progresso trocas"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ATENDIMENTOS POR DIA -->
+
+            <div class="grafico">
+
+                <div class="grafico-titulo">
+                    <div>
+                        <span class="mini-label">MOVIMENTO</span>
+                        <h3>Atendimentos por dia</h3>
+                    </div>
+
+                    <span class="grafico-icon">⌁</span>
+                </div>
+
+
+                <div class="grafico-dias">
+
+                    <div class="linha-grafico"></div>
+
+                    <div class="ponto-dia">
+                        <div class="ponto"></div>
+                        <strong>4</strong>
+                        <span>01/09</span>
+                    </div>
+
+                    <div class="ponto-dia">
+                        <div class="ponto"></div>
+                        <strong>4</strong>
+                        <span>02/09</span>
+                    </div>
+
+                    <div class="ponto-dia">
+                        <div class="ponto"></div>
+                        <strong>4</strong>
+                        <span>03/09</span>
+                    </div>
+
+                    <div class="ponto-dia">
+                        <div class="ponto"></div>
+                        <strong>4</strong>
+                        <span>04/09</span>
+                    </div>
+
+                    <div class="ponto-dia">
+                        <div class="ponto"></div>
+                        <strong>4</strong>
+                        <span>05/09</span>
+                    </div>
+
+                </div>
+
+                <div class="resumo-dia">
+                    <span>Movimento constante</span>
+                    <strong>4 atendimentos/dia</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MOVIMENTO MENSAL (VENDAS POR DIA) -->
+
+        <section class="mensal">
+
+            <div class="mensal-titulo">
+                <div>
+                    <span class="mini-label">TENDÊNCIA MENSAL</span>
+                    <h3>Vendas por dia — Janeiro/2026</h3>
+                </div>
+                <span class="grafico-icon">⌁</span>
+            </div>
+
+            <div class="mensal-stats">
+                <div>
+                    <span>Total no mês</span>
+                    <strong>305</strong>
+                </div>
+                <div>
+                    <span>Média diária</span>
+                    <strong>10</strong>
+                </div>
+                <div>
+                    <span>Dia de pico</span>
+                    <strong>Dia 24 (16 vendas)</strong>
+                </div>
+            </div>
+
+            <div class="mensal-chart">
+                <svg viewBox="0 0 620 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="areaGradiente" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#8365ec" stop-opacity="0.35" />
+                            <stop offset="100%" stop-color="#8365ec" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+
+                    <path class="area-mensal"
+                        d="M15,180 L15,139 L34.7,121 L54.3,130 L74.0,103 L93.7,112 L113.3,94 L133.0,76 L152.7,103 L172.3,121 L192.0,112 L211.7,94 L231.3,67 L251.0,85 L270.7,103 L290.3,112 L310.0,94 L329.7,58 L349.3,40 L369.0,67 L388.7,85 L408.3,94 L428.0,76 L447.7,49 L467.3,31 L487.0,58 L506.7,76 L526.3,94 L546.0,85 L565.7,67 L585.3,49 L605.0,85 L605.0,180 Z" />
+
+                    <path class="linha-mensal"
+                        d="M15,139 L34.7,121 L54.3,130 L74.0,103 L93.7,112 L113.3,94 L133.0,76 L152.7,103 L172.3,121 L192.0,112 L211.7,94 L231.3,67 L251.0,85 L270.7,103 L290.3,112 L310.0,94 L329.7,58 L349.3,40 L369.0,67 L388.7,85 L408.3,94 L428.0,76 L447.7,49 L467.3,31 L487.0,58 L506.7,76 L526.3,94 L546.0,85 L565.7,67 L585.3,49 L605.0,85" />
+
+                    <circle class="ponto-pico" cx="467.3" cy="31" r="4.5" />
+                </svg>
+
+                <div class="mensal-eixo">
+                    <span>Dia 1</span>
+                    <span>Dia 5</span>
+                    <span>Dia 10</span>
+                    <span>Dia 15</span>
+                    <span>Dia 20</span>
+                    <span>Dia 25</span>
+                    <span>Dia 31</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- TABELA -->
+
+        <section class="recentes">
+
+            <div class="tabela-titulo">
+
+                <div>
+                    <span class="mini-label">HISTÓRICO</span>
+                    <h3>Atendimentos recentes</h3>
+                </div>
+
+                <span class="ver-mais">Últimos registros</span>
+
+            </div>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Data e hora</th>
+                        <th>Cliente</th>
+                        <th>Atendente</th>
+                        <th>Fila</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+                        <td>05/09/2026 11:15</td>
+                        <td>Carla Mendes</td>
+                        <td>Bruno</td>
+                        <td><span class="tag vendas-tag">Vendas</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>05/09/2026 10:30</td>
+                        <td>Diego Santos</td>
+                        <td>Ana</td>
+                        <td><span class="tag financeiro-tag">Financeiro</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>05/09/2026 09:45</td>
+                        <td>Eduarda Alves</td>
+                        <td>Bruno</td>
+                        <td><span class="tag suporte-tag">Suporte Técnico</span></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <span>Sistema de Atendimento</span>
+        <span>Dashboard • 2026</span>
+    </footer>
+
+    <script>
+        // Protótipo de front-end: bloqueia o acesso ao dashboard sem login
+        if (!sessionStorage.getItem('atendimento_logado')) {
+            window.location.href = 'login.html';
+        }
+
+        document.getElementById('btn-sair').addEventListener('click', function () {
+            sessionStorage.removeItem('atendimento_logado');
+        });
+    </script>
+
+</body>
+
+</html>

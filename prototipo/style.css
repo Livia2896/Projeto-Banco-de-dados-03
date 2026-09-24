@@ -1,0 +1,874 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f4ff;
+    color: #28243a;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* =========================
+   FORMAS DO FUNDO
+========================= */
+
+.background-shape {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.shape-one {
+    width: 350px;
+    height: 350px;
+    background: #e9e2ff;
+    top: -170px;
+    right: -100px;
+}
+
+.shape-two {
+    width: 250px;
+    height: 250px;
+    background: #eeeaff;
+    bottom: 100px;
+    left: -150px;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 21px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e8e3f5;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6d4de8;
+    color: white;
+    border-radius: 9px;
+    font-size: 17px;
+    box-shadow: 0 5px 12px rgba(109, 77, 232, 0.25);
+}
+
+.logo h1 {
+    font-size: 20px;
+    color: #29234a;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666174;
+    font-size: 13px;
+    background: #faf9ff;
+    border: 1px solid #e7e2f3;
+    padding: 8px 13px;
+    border-radius: 20px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #55b98a;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #e7f7ef;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+main {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 45px 30px;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 32px;
+}
+
+.subtitulo,
+.mini-label {
+    color: #7656d9;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.titulo h2 {
+    font-size: 32px;
+    color: #29234a;
+    margin: 7px 0;
+}
+
+.titulo p {
+    color: #77718c;
+    font-size: 15px;
+}
+
+.periodo {
+    background: white;
+    padding: 13px 17px;
+    border-radius: 12px;
+    border: 1px solid #e7e2f3;
+    text-align: right;
+    box-shadow: 0 5px 18px rgba(80, 65, 130, 0.05);
+}
+
+.periodo span {
+    display: block;
+    color: #898396;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.periodo strong {
+    color: #4e3b9d;
+    font-size: 12px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: white;
+    padding: 23px;
+    border-radius: 17px;
+    border: 1px solid #e7e2f3;
+    box-shadow: 0 6px 22px rgba(80, 65, 130, 0.07);
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(80, 65, 130, 0.12);
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #f0ecff;
+    right: -45px;
+    top: -45px;
+}
+
+.card.destaque {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f5ff 100%);
+    border-color: #ddd3fa;
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.icone {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: #f0ecff;
+    color: #6d4de8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.card-label {
+    font-size: 10px;
+    color: #8a8498;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.card strong {
+    display: block;
+    margin-top: 20px;
+    font-size: 29px;
+    color: #30265c;
+    position: relative;
+    z-index: 1;
+}
+
+.card p {
+    color: #77718c;
+    font-size: 13px;
+    margin-top: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+.card-line {
+    width: 35px;
+    height: 3px;
+    background: #7656e8;
+    border-radius: 5px;
+    margin-top: 18px;
+}
+
+
+/* =========================
+   GRÁFICOS
+========================= */
+
+.graficos {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.grafico {
+    background: white;
+    padding: 27px;
+    border-radius: 17px;
+    border: 1px solid #e7e2f3;
+    box-shadow: 0 6px 22px rgba(80, 65, 130, 0.06);
+}
+
+.grafico-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 27px;
+}
+
+.grafico h3 {
+    color: #30265c;
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+.grafico-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background: #f1edff;
+    color: #6d4de8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================
+   BARRAS
+========================= */
+
+.barra {
+    margin-bottom: 19px;
+}
+
+.barra-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    font-size: 13px;
+}
+
+.barra-info span {
+    color: #5f596d;
+}
+
+.barra-info strong {
+    color: #403567;
+}
+
+.barra-fundo {
+    width: 100%;
+    height: 9px;
+    background: #f0edf6;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progresso {
+    height: 100%;
+    background: linear-gradient(90deg, #8365ec, #6243cf);
+    border-radius: 20px;
+}
+
+.vendas {
+    width: 100%;
+}
+
+.financeiro {
+    width: 63%;
+}
+
+.suporte {
+    width: 50%;
+}
+
+.trocas {
+    width: 38%;
+}
+
+
+/* =========================
+   GRÁFICO DE DIAS
+========================= */
+
+.grafico-dias {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 5px;
+}
+
+.linha-grafico {
+    position: absolute;
+    left: 7%;
+    right: 7%;
+    top: 50%;
+    height: 2px;
+    background: #ddd7ef;
+}
+
+.ponto-dia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    position: relative;
+    z-index: 1;
+}
+
+.ponto {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #7656e8;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px #ded5fb;
+}
+
+.ponto-dia strong {
+    position: absolute;
+    top: -30px;
+    font-size: 12px;
+    color: #4e3b9d;
+}
+
+.ponto-dia span {
+    color: #888294;
+    font-size: 11px;
+}
+
+.resumo-dia {
+    margin-top: 12px;
+    padding-top: 13px;
+    border-top: 1px solid #eeeaf5;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+}
+
+.resumo-dia span {
+    color: #8a8495;
+}
+
+.resumo-dia strong {
+    color: #6d4de8;
+}
+
+
+/* =========================
+   MOVIMENTO MENSAL (NOVO)
+========================= */
+
+.mensal {
+    background: white;
+    padding: 27px;
+    border-radius: 17px;
+    border: 1px solid #e7e2f3;
+    box-shadow: 0 6px 22px rgba(80, 65, 130, 0.06);
+    margin-bottom: 25px;
+}
+
+.mensal-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 22px;
+}
+
+.mensal-titulo h3 {
+    color: #30265c;
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+.mensal-stats {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+}
+
+.mensal-stats div {
+    background: #faf9fd;
+    border: 1px solid #eee9f8;
+    border-radius: 12px;
+    padding: 11px 16px;
+    flex: 1;
+    min-width: 130px;
+}
+
+.mensal-stats span {
+    display: block;
+    color: #8a8495;
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+.mensal-stats strong {
+    color: #4e3b9d;
+    font-size: 15px;
+}
+
+.mensal-chart svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.area-mensal {
+    fill: url(#areaGradiente);
+}
+
+.linha-mensal {
+    fill: none;
+    stroke: #6d4de8;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.ponto-pico {
+    fill: #6d4de8;
+    stroke: white;
+    stroke-width: 2;
+}
+
+.mensal-eixo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 11px;
+    color: #888294;
+}
+
+
+/* =========================
+   TABELA
+========================= */
+
+.recentes {
+    background: white;
+    padding: 27px;
+    border-radius: 17px;
+    border: 1px solid #e7e2f3;
+    box-shadow: 0 6px 22px rgba(80, 65, 130, 0.06);
+}
+
+.tabela-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tabela-titulo h3 {
+    color: #30265c;
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+.ver-mais {
+    color: #8a8495;
+    font-size: 11px;
+    background: #faf9fd;
+    padding: 7px 11px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    font-size: 11px;
+    color: #898396;
+    font-weight: bold;
+    padding: 12px;
+    background: #faf9fd;
+    border-bottom: 1px solid #e8e4f2;
+}
+
+td {
+    padding: 15px 12px;
+    font-size: 13px;
+    color: #555060;
+    border-bottom: 1px solid #eeeaf5;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.tag {
+    padding: 5px 9px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.vendas-tag {
+    background: #eee9ff;
+    color: #6648c9;
+}
+
+.financeiro-tag {
+    background: #f4edff;
+    color: #7854bb;
+}
+
+.suporte-tag {
+    background: #ebeefc;
+    color: #5663ad;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    color: #9993a7;
+    font-size: 11px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 18px 25px;
+    }
+
+    main {
+        padding: 35px 20px;
+    }
+
+    .titulo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .periodo {
+        text-align: left;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .graficos {
+        grid-template-columns: 1fr;
+    }
+
+    .mensal-stats {
+        flex-direction: column;
+    }
+
+    footer {
+        padding: 0 20px 25px;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    header h1 {
+        font-size: 16px;
+    }
+
+    .status {
+        font-size: 11px;
+    }
+
+    .titulo h2 {
+        font-size: 26px;
+    }
+
+    .grafico,
+    .card,
+    .recentes,
+    .mensal {
+        padding: 20px;
+    }
+
+    table {
+        font-size: 11px;
+    }
+
+    th,
+    td {
+        padding: 9px 6px;
+    }
+
+    .ver-mais {
+        display: none;
+    }
+
+    .mensal-eixo span:nth-child(2n) {
+        display: none;
+    }
+}
+
+
+/* =========================
+   AUTENTICAÇÃO (LOGIN / CADASTRO)
+========================= */
+
+.auth-shell {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    min-height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-card {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 38px 34px;
+    border-radius: 20px;
+    border: 1px solid #e7e2f3;
+    box-shadow: 0 12px 32px rgba(80, 65, 130, 0.1);
+    text-align: left;
+}
+
+.auth-card h2 {
+    font-size: 25px;
+    color: #29234a;
+    margin: 7px 0 8px;
+}
+
+.auth-sub {
+    color: #77718c;
+    font-size: 13px;
+    margin-bottom: 26px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-size: 12px;
+    color: #5f596d;
+    font-weight: bold;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="password"] {
+    border: 1px solid #e2ddef;
+    background: #faf9fd;
+    border-radius: 11px;
+    padding: 12px 14px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #28243a;
+    outline: none;
+    transition: 0.2s;
+}
+
+.campo input:focus {
+    border-color: #8365ec;
+    background: white;
+    box-shadow: 0 0 0 3px #ede8ff;
+}
+
+.auth-radios {
+    display: flex;
+    gap: 10px;
+}
+
+.radio-pill {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border: 1px solid #e2ddef;
+    background: #faf9fd;
+    border-radius: 11px;
+    padding: 10px 12px;
+    font-size: 13px;
+    color: #5f596d;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.radio-pill:has(input:checked) {
+    border-color: #8365ec;
+    background: #f0ecff;
+    color: #4e3b9d;
+    font-weight: bold;
+}
+
+.btn-primary {
+    margin-top: 6px;
+    border: none;
+    border-radius: 11px;
+    padding: 13px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #8365ec, #6243cf);
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(109, 77, 232, 0.28);
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(109, 77, 232, 0.35);
+}
+
+.auth-footer-link {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 13px;
+    color: #77718c;
+}
+
+.auth-footer-link a {
+    color: #6d4de8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.auth-footer-link a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 550px) {
+
+    .auth-shell {
+        padding: 40px 20px;
+    }
+
+    .auth-card {
+        padding: 28px 22px;
+    }
+
+}
+
+
+/* =========================
+   AÇÕES DO CABEÇALHO (LOGOUT)
+========================= */
+
+.header-acoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-sair {
+    color: #6d4de8;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #f0ecff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #ded5fb;
+    transition: 0.2s;
+}
+
+.btn-sair:hover {
+    background: #e6deff;
+}
